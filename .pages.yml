@@ -42,4 +42,4 @@ collections:
         required: true
       - name: "bio"
         type: "rich-text"
-        required: true
+        required: true 
