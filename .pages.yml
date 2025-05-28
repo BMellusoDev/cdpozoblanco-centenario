@@ -1,6 +1,8 @@
 media:
   # configuración para media (opcional)
   folder: "public/media"
+&nbsp;
+&nbsp;
 
 content:
   - name: "historia"
@@ -21,6 +23,8 @@ content:
         name: "body"
         label: "Contenido"
         required: true
+&nbsp;
+&nbsp;
 
   - name: "eventos"
     label: "Eventos"
@@ -40,6 +44,8 @@ content:
         name: "description"
         label: "Descripción"
         required: true
+&nbsp;
+&nbsp;
 
   - name: "jugadores"
     label: "Jugadores"
@@ -59,5 +65,9 @@ content:
         name: "bio"
         label: "Biografía"
         required: true
+&nbsp;
+&nbsp;
 
-components: 
+components:
+&nbsp;
+&nbsp;
