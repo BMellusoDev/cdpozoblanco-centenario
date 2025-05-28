@@ -1,42 +1,83 @@
-media: media
+media:
+  folder: "public/media"  # donde almacenarás imágenes y otros medios
+
 content:
-  - name: posts
-    label: Posts
+  - name: historia
+    label: Historia
     type: collection
-    path: '_posts'
+    path: "src/content/historia"
     view:
-      fields: [ title, published, date ]
+      fields: [ title, date ]
     fields:
-      - name: published
-        label: Published
-        type: boolean
-        default: true
-      - name: date
-        label: Date
-        type: date
       - name: title
-        label: Title
+        label: Título
         type: string
+        required: true
+      - name: date
+        label: Fecha
+        type: date
+        required: true
       - name: body
-        label: Body
+        label: Contenido
         type: rich-text
+        required: true
+
+  - name: eventos
+    label: Eventos
+    type: collection
+    path: "src/content/eventos"
+    view:
+      fields: [ title, date ]
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: date
+        label: Fecha
+        type: date
+        required: true
+      - name: description
+        label: Descripción
+        type: rich-text
+        required: true
+
+  - name: jugadores
+    label: Jugadores
+    type: collection
+    path: "src/content/jugadores"
+    view:
+      fields: [ name, position ]
+    fields:
+      - name: name
+        label: Nombre
+        type: string
+        required: true
+      - name: position
+        label: Posición
+        type: string
+        required: true
+      - name: bio
+        label: Biografía
+        type: rich-text
+        required: true
+
   - name: config
-    label: Jekyll config
-    path: _config.yml
+    label: Configuración del sitio
+    path: "src/config/site-config.yml"
     type: file
     fields:
       - name: title
-        label: Website title
+        label: Título del sitio
         type: string
       - name: description
-        label: Website description
+        label: Descripción del sitio
         type: string
-        description: Will be provused for any page with no description.
       - name: url
-        label: Website URL
+        label: URL del sitio
         type: string
         pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
       - name: cover
-        label: Preview image
+        label: Imagen de portada
         type: image
-        description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
+        description: Imagen usada en la previsualización social
