@@ -1,0 +1,45 @@
+collections:
+  historia:
+    path: "src/content/historia"
+    format: "md"
+    slug: "{{slug}}"
+    fields:
+      - name: "title"
+        type: "string"
+        required: true
+      - name: "date"
+        type: "date"
+        required: true
+      - name: "body"
+        type: "rich-text"
+        required: true
+
+  eventos:
+    path: "src/content/eventos"
+    format: "md"
+    slug: "{{slug}}"
+    fields:
+      - name: "title"
+        type: "string"
+        required: true
+      - name: "date"
+        type: "date"
+        required: true
+      - name: "description"
+        type: "rich-text"
+        required: true
+
+  jugadores:
+    path: "src/content/jugadores"
+    format: "md"
+    slug: "{{slug}}"
+    fields:
+      - name: "name"
+        type: "string"
+        required: true
+      - name: "position"
+        type: "string"
+        required: true
+      - name: "bio"
+        type: "rich-text"
+        required: true
