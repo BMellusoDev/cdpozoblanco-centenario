@@ -1,0 +1,15 @@
+branch: main
+collections:
+  - label: "Historia"
+    folder: "src/content/historia"
+    format: "md"
+    fields:
+      - name: "title"
+        label: "Título"
+        widget: "string"
+      - name: "date"
+        label: "Fecha"
+        widget: "datetime"
+      - name: "body"
+        label: "Contenido"
+        widget: "markdown" 

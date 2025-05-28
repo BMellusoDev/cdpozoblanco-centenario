@@ -1,0 +1,19 @@
+{
+  "collections": {
+    "historia": {
+      "label": "Historia del Club",
+      "folder": "src/content/historia",
+      "format": "markdown"
+    },
+    "eventos": {
+      "label": "Eventos",
+      "folder": "src/content/eventos",
+      "format": "markdown"
+    },
+    "testimonios": {
+      "label": "Testimonios",
+      "folder": "src/content/testimonios",
+      "format": "markdown"
+    }
+  }
+}

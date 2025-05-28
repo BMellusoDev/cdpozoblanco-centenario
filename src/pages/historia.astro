@@ -1,0 +1,28 @@
+---
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const postsDir = path.resolve('./src/content/historia');
+const files = fs.readdirSync(postsDir);
+
+const posts = files.map(file => {
+  const fullPath = path.join(postsDir, file);
+  const fileContents = fs.readFileSync(fullPath, 'utf-8');
+  const { data, content } = matter(fileContents);
+  return { data, content };
+});
+---
+
+<BaseLayout title="Historia - Centenario CD Pozoblanco">
+  <section>
+    <h1>Historia del Club</h1>
+    {posts.map(post => (
+      <article>
+        <h2>{post.data.title} ({post.data.year})</h2>
+        <p>{post.content}</p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

@@ -1,0 +1,20 @@
+---
+import { onMount } from 'solid-js';
+---
+
+<script type="module">
+  import Lenis from '@studio-freight/lenis';
+
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => t * (2 - t),
+    smooth: true,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>

@@ -1,0 +1,29 @@
+---
+import '../styles/styles.scss';
+const { title = 'CD Pozoblanco' } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+         <a href="/">
+          <img src="https://cdpozoblanco.es/wp-content/uploads/2021/09/IMG_6950.png" alt="Escudo CD Pozoblanco" class="escudo" />
+          
+        </a>
+        <a href="/">Inicio</a>
+        <a href="/historia">Historia</a>
+        <a href="/eventos">Eventos</a>
+        <a href="/tienda">Tienda</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

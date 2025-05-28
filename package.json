@@ -1,0 +1,17 @@
+{
+  "name": "cdpozoblanco-centenario",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^0.2.26",
+    "astro": "^3.0.0",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}
