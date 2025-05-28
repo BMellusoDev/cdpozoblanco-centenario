@@ -1,63 +1,83 @@
 media:
-  # configuración para media (opcional)
-  folder: "public/media"
+  folder: "public/media"  # donde almacenarás imágenes y otros medios
 
 content:
-  - name: "historia"
-    label: "Historia"
-    folder: "src/content/historia"
-    slug: "{{slug}}"
-    format: "md"
+  - name: historia
+    label: Historia
+    type: collection
+    path: "src/content/historia"
+    view:
+      fields: [ title, date ]
     fields:
-      - type: "string"
-        name: "title"
-        label: "Título"
+      - name: title
+        label: Título
+        type: string
         required: true
-      - type: "date"
-        name: "date"
-        label: "Fecha"
+      - name: date
+        label: Fecha
+        type: date
         required: true
-      - type: "rich-text"
-        name: "body"
-        label: "Contenido"
+      - name: body
+        label: Contenido
+        type: rich-text
         required: true
 
-  - name: "eventos"
-    label: "Eventos"
-    folder: "src/content/eventos"
-    slug: "{{slug}}"
-    format: "md"
+  - name: eventos
+    label: Eventos
+    type: collection
+    path: "src/content/eventos"
+    view:
+      fields: [ title, date ]
     fields:
-      - type: "string"
-        name: "title"
-        label: "Título"
+      - name: title
+        label: Título
+        type: string
         required: true
-      - type: "date"
-        name: "date"
-        label: "Fecha"
+      - name: date
+        label: Fecha
+        type: date
         required: true
-      - type: "rich-text"
-        name: "description"
-        label: "Descripción"
+      - name: description
+        label: Descripción
+        type: rich-text
         required: true
 
-  - name: "jugadores"
-    label: "Jugadores"
-    folder: "src/content/jugadores"
-    slug: "{{slug}}"
-    format: "md"
+  - name: jugadores
+    label: Jugadores
+    type: collection
+    path: "src/content/jugadores"
+    view:
+      fields: [ name, position ]
     fields:
-      - type: "string"
-        name: "name"
-        label: "Nombre"
+      - name: name
+        label: Nombre
+        type: string
         required: true
-      - type: "string"
-        name: "position"
-        label: "Posición"
+      - name: position
+        label: Posición
+        type: string
         required: true
-      - type: "rich-text"
-        name: "bio"
-        label: "Biografía"
+      - name: bio
+        label: Biografía
+        type: rich-text
         required: true
 
-components:
+  - name: config
+    label: Configuración del sitio
+    path: "src/config/site-config.yml"
+    type: file
+    fields:
+      - name: title
+        label: Título del sitio
+        type: string
+      - name: description
+        label: Descripción del sitio
+        type: string
+      - name: url
+        label: URL del sitio
+        type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+      - name: cover
+        label: Imagen de portada
+        type: image
+        description: Imagen usada en la previsualización social 
