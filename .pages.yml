@@ -1,3 +1,7 @@
+media:
+  # configuración para media (opcional)
+  folder: "public/media"
+
 content:
   - name: "historia"
     label: "Historia"
@@ -17,3 +21,43 @@ content:
         name: "body"
         label: "Contenido"
         required: true
+
+  - name: "eventos"
+    label: "Eventos"
+    folder: "src/content/eventos"
+    slug: "{{slug}}"
+    format: "md"
+    fields:
+      - type: "string"
+        name: "title"
+        label: "Título"
+        required: true
+      - type: "date"
+        name: "date"
+        label: "Fecha"
+        required: true
+      - type: "rich-text"
+        name: "description"
+        label: "Descripción"
+        required: true
+
+  - name: "jugadores"
+    label: "Jugadores"
+    folder: "src/content/jugadores"
+    slug: "{{slug}}"
+    format: "md"
+    fields:
+      - type: "string"
+        name: "name"
+        label: "Nombre"
+        required: true
+      - type: "string"
+        name: "position"
+        label: "Posición"
+        required: true
+      - type: "rich-text"
+        name: "bio"
+        label: "Biografía"
+        required: true
+
+components:
