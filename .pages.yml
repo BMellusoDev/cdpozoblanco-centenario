@@ -1,45 +1,64 @@
-collections:
-  historia:
-    path: "src/content/historia"
-    format: "md"
+media:
+  # configuración para media (opcional)
+  folder: "public/media"
+
+content:
+  - name: "historia"
+    label: "Historia"
+    folder: "src/content/historia"
     slug: "{{slug}}"
+    format: "md"
     fields:
-      - name: "title"
-        type: "string"
+      - type: "string"
+        name: "title"
+        label: "Título"
         required: true
-      - name: "date"
-        type: "date"
+      - type: "date"
+        name: "date"
+        label: "Fecha"
         required: true
-      - name: "body"
-        type: "rich-text"
+      - type: "rich-text"
+        name: "body"
+        label: "Contenido"
         required: true
 
-  eventos:
-    path: "src/content/eventos"
-    format: "md"
+  - name: "eventos"
+    label: "Eventos"
+    folder: "src/content/eventos"
     slug: "{{slug}}"
+    format: "md"
     fields:
-      - name: "title"
-        type: "string"
+      - type: "string"
+        name: "title"
+        label: "Título"
         required: true
-      - name: "date"
-        type: "date"
+      - type: "date"
+        name: "date"
+        label: "Fecha"
         required: true
-      - name: "description"
-        type: "rich-text"
+      - type: "rich-text"
+        name: "description"
+        label: "Descripción"
         required: true
 
-  jugadores:
-    path: "src/content/jugadores"
-    format: "md"
+  - name: "jugadores"
+    label: "Jugadores"
+    folder: "src/content/jugadores"
     slug: "{{slug}}"
+    format: "md"
     fields:
-      - name: "name"
-        type: "string"
+      - type: "string"
+        name: "name"
+        label: "Nombre"
         required: true
-      - name: "position"
-        type: "string"
+      - type: "string"
+        name: "position"
+        label: "Posición"
         required: true
-      - name: "bio"
-        type: "rich-text"
-        required: true 
+      - type: "rich-text"
+        name: "bio"
+        label: "Biografía"
+        required: true
+
+components:
+  # aquí podrías definir grupos de campos reutilizables (opcional)
